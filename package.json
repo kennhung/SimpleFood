@@ -1,0 +1,19 @@
+{
+  "name": "simplefood",
+  "version": "1.0.0",
+  "description": "A very simple food ordering system for small groups of people to use.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kennhung/SimpleFood.git"
+  },
+  "author": "KennHuang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kennhung/SimpleFood/issues"
+  },
+  "homepage": "https://github.com/kennhung/SimpleFood#readme"
+}
