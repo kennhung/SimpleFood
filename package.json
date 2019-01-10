@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/kennhung/SimpleFood/issues"
   },
-  "homepage": "https://github.com/kennhung/SimpleFood#readme"
+  "homepage": "https://github.com/kennhung/SimpleFood#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
