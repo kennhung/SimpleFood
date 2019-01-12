@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "eslint": "./node_modules/.bin/eslint ./",
     "eslint-fix": "./node_modules/.bin/eslint ./ --fix",
-    "start": "node ./index.js"
+    "start": "node ./index.js --port=3000 --dbString=mongodb://localhost:27017/SimpleFoods"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/kennhung/SimpleFood#readme",
   "dependencies": {
+    "command-line-args": "^5.0.2",
     "express": "^4.16.4",
     "mongodb": "^3.1.10",
     "pug": "^2.0.3"
