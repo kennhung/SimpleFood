@@ -13,5 +13,7 @@ app.get('/summary', routes.summary);
 
 initDB(() => {
   const port = options.port;
+
+  
   app.listen(port, (err) => console.log(`SimpleFood listening on port ${port}!`));
 });
