@@ -1,0 +1,40 @@
+extends ../layout.pug
+
+block content
+    .mt-5
+    .row
+        .col.col-lg-2
+        .col.col-lg-8
+            table#foodsListTable(class="table table-hover bg-white")
+                thead
+                    tr
+                        th id
+                        th name
+                        th price
+                        th unit
+                        th source
+                tbody
+                    for item in foods
+                        tr
+                            td= item._id
+                            td= item.name
+                            td= item.price
+                            td= item.unit
+                            td= item.source
+        .col.col-lg-2
+
+
+block styleSheets
+    link(rel="stylesheet", href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css")
+
+block script
+    script(src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js")
+    script(src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js")
+    script.
+        var foodsTable = $("#foodsListTable").DataTable({
+            "pageLength": 50,
+            "order": [1, 'asc'],
+            "info": true,
+            "columnDefs": []
+        });
+

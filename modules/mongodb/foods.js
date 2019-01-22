@@ -2,14 +2,14 @@ const mongodb = require('./index');
 
 function getAllFoods(callback) {
     const db = mongodb.getDB();
-    let foods = [];
 
     db.collection('foods', function (err, collection) {
+        let foods = [];
         collection.find({}).forEach((doc) => {
             foods.push(doc);
+        }, (error) => {
+            callback(error, foods);
         });
-
-        callback(err, foods);
     });
 }
 

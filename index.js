@@ -11,6 +11,8 @@ app.get('/', routes.index);
 
 app.get('/summary', routes.summary);
 
+app.get('/foods/list', routes.foodsList);
+
 initDB(() => {
   const port = options.port;
 
