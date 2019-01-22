@@ -4,7 +4,7 @@
   "description": "A very simple food ordering system for small groups of people to use.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
+    "test": "env port=3000 dbString=mongodb://localhost:27017 dbName=SimpleFoodsTest  mocha",
     "eslint": "./node_modules/.bin/eslint ./",
     "eslint-fix": "./node_modules/.bin/eslint ./ --fix",
     "start": "node ./index.js --port=3000 --dbString=mongodb://localhost:27017/SimpleFoods --dbName=SimpleFoods"
