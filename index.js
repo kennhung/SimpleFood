@@ -2,16 +2,16 @@ const express = require('express');
 const app = express();
 const options = require('./modules/config').getConfig();
 const initDB = require('./modules/mongodb/index').initDB;
-const routes = require('./modules/routes');
+const router = require('./modules/router');
 
 
 app.set('view engine', 'pug');
 
-app.get('/', routes.index);
+app.get('/', router.index);
 
-app.get('/summary', routes.summary);
+app.get('/summary', router.summary);
 
-app.get('/foods/list', routes.foodsList);
+app.get('/foods/list', router.foods.list);
 
 initDB(() => {
   const port = options.port;
